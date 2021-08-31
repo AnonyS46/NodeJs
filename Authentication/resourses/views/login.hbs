@@ -1,0 +1,26 @@
+<form method="post" action="/login">
+    <h2>Đăng nhập tài khoản của bạn</h2>
+    {{#if message}}
+    <div class="mb-3 text-center" style="color:red;">{{message}}</div>
+    {{/if}}
+    <div class="mb-3">
+      <label for="username" class="form-label">User name</label>
+      <input type="text" class="form-control" id="username" name="username" placeholder="Tên đăng nhập" value="">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu của bạn" >
+    </div>
+    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+</form>
+
+<script>
+  var username=document.querySelector('#username');
+  var password=document.querySelector('#password');
+  var message=document.querySelector('#message');
+  if(message.innerText!=='') {
+    alert(message.innerText)
+    username.value=''
+    password.value=''
+  }
+</script>

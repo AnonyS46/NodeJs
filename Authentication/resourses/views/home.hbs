@@ -1,0 +1,22 @@
+{{#if message}}
+    <h1 class="text-center">Bạn chưa đăng nhập</h1>
+{{else}}
+    <div class="logintrue"></div>
+    <div id="messageSuccess" style="display:none">{{messageSuccess}}</div>
+    <h1 class="text-center">Xin chào bạn {{user.fullname}} </h1>
+    <div class="text-center">
+        <a href="/logout" class="btn  btn-danger text-center" >  => Đăng xuất</a>
+    </div>
+{{/if}}
+
+<script>
+    var logintrue=document.querySelector('.logintrue');
+    if(logintrue) {
+        document.querySelector('.login').remove()
+        document.querySelector('.register').remove()
+    }
+    var messageSuccess=document.querySelector('#messageSuccess');
+    if(messageSuccess.innerText!=='') {
+        alert(messageSuccess.innerText)
+    }
+</script>

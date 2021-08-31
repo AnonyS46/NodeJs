@@ -1,0 +1,21 @@
+<form method="post" id="createForm"  action="/product/create">
+    <h2>Đăng sản phẩm mới</h2>
+    <div class="mb-3">
+        <label for="name" class="form-label">Tên sản phẩm</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Tên sản phẩm" required>
+    </div>
+    <div class="mb-3">
+        <label for="img" class="form-label">Ảnh</label>
+        <input type="text" class="form-control" id="img" name="img" placeholder="Url của ảnh" required>
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Giá</label>
+        <input type="text" class="form-control" id="price" name="price" placeholder="Giá tiền" required>
+    </div>
+    <button type="submit"  class="btn btn-primary">Tạo mới</button>
+</form>
+
+<script>
+    document.querySelector('.login').remove()
+    document.querySelector('.register').remove()
+</script>
